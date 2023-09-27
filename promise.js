@@ -1,7 +1,6 @@
 const posts = [];
 let lastActivityTime = null;
 
-
 function createPost(post) {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -10,7 +9,6 @@ function createPost(post) {
     }, 1000);
   });
 }
-
 
 function deletePost() {
   return new Promise((resolve) => {
@@ -21,7 +19,6 @@ function deletePost() {
   });
 }
 
-
 function updateLastUserActivityTime() {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -30,7 +27,6 @@ function updateLastUserActivityTime() {
     }, 1000);
   });
 }
-
 
 Promise.all([createPost({ title: "Post 1" }), updateLastUserActivityTime()]);
 Promise.all([createPost({ title: "Post 2" }), updateLastUserActivityTime()]);
